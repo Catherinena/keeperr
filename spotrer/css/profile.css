@@ -1,0 +1,55 @@
+#brief_intro_content b{
+	margin-left: 15px;
+	margin-right: 15px;
+	font-size: 56px;
+	color: #4A89DC;
+	font-family: "Chalkboard";
+}
+#brief_intro_content p{
+	font-size: 22px;
+	font-family: "PingFang SC";
+	font-weight: 200;
+}
+
+#brief_intro_content{
+	display: none;
+	text-align: center;
+}
+
+#brief_intro{
+	background-color: #4A89DC;
+	color: white;
+	font-size: 22px;
+	min-height: 30px;
+	text-align: center;
+	font-family: "PingFang SC";
+	font-weight: 200;
+	cursor: default;
+}
+#daily_detail_info{
+	min-height: 369px;
+}
+#daily_detail_info p{
+	font-size: 22px;
+	font-weight: 200;
+}
+.ico{
+	align-content: center ;
+	background-repeat: no-repeat;
+	width:30px;
+	height:30px;
+	margin-right: 15px;
+
+}
+#daily_detail_info b{
+	font-family: "Chalkboard";
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/*.calendar .older{*/
+	/*color: #F6BB42;*/
+/*}*/
+/*.calendar{*/
+	/*background-color: #FFCE54;*/
+/*}*/

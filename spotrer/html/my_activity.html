@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My_Activity</title>
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/site.min.js"></script>
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="../css/bootflat.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/site.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/activity_page.css" />
+    <link rel="stylesheet" type="text/css" href="../css/act_person.css">
+    <script src="../js/activity.js"></script>
+</head>
+<body>
+
+<div class="docs-header">
+    <nav class="navbar navbar-default navbar-custom" role="navigation" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="../img/logo.png" height="40"/>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="nav-link current" href="activity.html">Activity</a>
+                    </li>
+
+                    <li>
+                        <a class="navbar-link" href="community.html">Community</a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="setting.html">Setting</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div id="activity_pane" class="row">
+    <div id="left-nav" class="col-lg-3 col-md-3 col-sm-5">
+        <div id="real-left-nav">
+            <div id="name_avatar">
+                <img src="../img/avatar12.png" class="img-rounded">
+                <h6>koawitch</h6>
+                <p>joined <b>8</b> activities</p>
+            </div>
+            <!--<hr />-->
+            <div>
+                <button type="button" class="btn btn-link col-lg-12 nav-buttons" onclick="location='activity.html'">Activity Community</button>
+                <button type="button" class="btn btn-primary col-lg-12" onclick="location='my_activity.html'">My Activity</button>
+                <button type="button" class="btn btn-link col-lg-12 nav-buttons" onclick="location='create_activity.html'">Create A New Activity</button>
+            </div>
+        </div>
+    </div>
+    <div id="all-act" class="col-lg-9 col-md-9 col-sm-7">
+        <div class="container documents">
+
+
+
+        </div>
+
+        <div class="col-md-12">
+            <h4>Activities I Create</h4>
+            <div class="act">
+                <ul id="my_create_activities">
+                </ul>
+            </div>
+
+            <h4>All Activities I joined</h4>
+            <div class="act">
+                <ul id="activities">
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+// TO DELETE--------------------------
+<div class="modal fade" id="act_01_detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top: 50px">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <p class="modal-title"><b>SinglePK</b>2016/06/01-2016/06/22</p>
+                <p class="modal-title"><i>the activity has ended</i></p>
+            </div>
+            <div class="modal-body">
+                <hr />
+                <div class="rank"  style="background-color: ghostwhite">
+                    <p class="rank-num">1st</p>
+                    <img class="img-circle" src="../img/avatar12.png" />
+                    <p class="name">Tom</p>
+                    <p class="records">has covered 12431200 steps</p>
+                </div>
+                <div class="rank">
+                    <p class="rank-num">2nd</p>
+                    <img class="img-circle" src="../img/avatar15.png" />
+                    <p class="name">Jerry</p>
+                    <p class="records">has covered 9431200 steps</p>
+                </div>
+                <hr/>
+                <div id="singlePK_graph" style="width:550px; height: 400px;margin-top: 50px; margin-left: 20px">
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<div class="modal fade" id="act_02_detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top: 50px">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <p class="modal-title"><b>multiPeople_competition</b>2016/08/01-2016/08/12</p>
+                <p class="modal-title"><i>the activity has ended</i></p>
+            </div>
+            <div class="modal-body">
+                <hr />
+                <div class="rank">
+                    <p class="rank-num">1st</p>
+                    <img class="img-circle" src="../img/avatar2.jpg" />
+                    <p class="name">Tom</p>
+                    <p class="records">has covered 12431200 steps</p>
+                </div>
+                <div class="rank" style="background-color: ghostwhite">
+                    <p class="rank-num">2nd</p>
+                    <img class="img-circle" src="../img/avatar12.png" />
+                    <p class="name">Jerry</p>
+                    <p class="records">has covered 9431200 steps</p>
+                </div>
+                <div class="rank">
+                    <p class="rank-num">3rd</p>
+                    <img class="img-circle" src="../img/avatar1.jpg" />
+                    <p class="name">Alan</p>
+                    <p class="records">has covered 61200 steps</p>
+                </div>
+                <div class="rank">
+                    <p class="rank-num">4th</p>
+                    <img class="img-circle" src="../img/avatar3.jpg" />
+                    <p class="name">Ram</p>
+                    <p class="records">has covered 38200 steps</p>
+                </div>
+                <div class="rank">
+                    <p class="rank-num">5th</p>
+                    <img class="img-circle" src="../img/avatar14.png" />
+                    <p class="name">Kim</p>
+                    <p class="records">has covered 23200 steps</p>
+                </div>
+                <div class="rank">
+                    <p class="rank-num">6th</p>
+                    <img class="img-circle" src="../img/avatar15.png" />
+                    <p class="name">Jim</p>
+                    <p class="records">has covered 1200 steps</p>
+                </div>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<div class="modal fade" id="act_03_detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top: 50px">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <p class="modal-title"><b>Target Competition(10000 steps per day)</b>2016/08/01-2016/08/12</p>
+                <p class="modal-title"><i>the activity has ended</i></p>
+            </div>
+            <div class="modal-body">
+                <hr />
+                <div class="rank">
+                    <p class="rank-num">1st</p>
+                    <img class="img-circle" src="../img/avatar2.jpg" />
+                    <p class="name">Tom</p>
+                    <p class="records">has achieved 14 days</p>
+                </div>
+                <div class="rank" style="background-color: ghostwhite">
+                    <p class="rank-num">2nd</p>
+                    <img class="img-circle" src="../img/avatar12.png" />
+                    <p class="name">Jerry</p>
+                    <p class="records">has achieved 12 days</p>
+                </div>
+                <div class="rank">
+                    <p class="rank-num">3rd</p>
+                    <img class="img-circle" src="../img/avatar1.jpg" />
+                    <p class="name">Alan</p>
+                    <p class="records">has achieved 9 days</p>
+                </div>
+                <div class="rank">
+                    <p class="rank-num">4th</p>
+                    <img class="img-circle" src="../img/avatar3.jpg" />
+                    <p class="name">Ram</p>
+                    <p class="records">has achieved 6 days</p>
+                </div>
+                <div class="rank">
+                    <p class="rank-num">5th</p>
+                    <img class="img-circle" src="../img/avatar14.png" />
+                    <p class="name">Kim</p>
+                    <p class="records">has achieved 1 days</p>
+                </div>
+                <div class="rank">
+                    <p class="rank-num">6th</p>
+                    <img class="img-circle" src="../img/avatar15.png" />
+                    <p class="name">Jim</p>
+                    <p class="records">has achieved 0 days</p>
+                </div>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+//DELETE-------------------------------
+<script>
+    $("#my_create_activities").append(my_create_activity(activity1));
+//    var tmp = $("#my_create_activities .join");
+//    tmp.removeClass("join");
+//    tmp.addClass("delete");
+//    tmp.html("delete");
+</script>
+
+<script>
+    $("#activities").append(my_join_activity(activity1));
+    $("#activities").append(my_join_activity(activity2));
+    $("#activities").append(my_join_activity(activity3));
+    $("#activities").append(my_join_activity(activity4));
+    $("#activities").append(my_join_activity(activity3));
+    $("#activities").append(my_join_activity(activity1));
+    $("#activities").append(my_join_activity(activity2));
+    $("#activities").append(my_join_activity(activity4));
+</script>
+
+<script src="../js/act_person.js"></script>
+<script src="../js/singlePK_act.js"></script>
+<script>
+    $("#act_01 .detail").attr({
+        "data-toggle":"modal",
+        "data-target":"#act_01_detail"
+    });
+    $("#act_02 .detail").attr({
+        "data-toggle":"modal",
+        "data-target":"#act_02_detail"
+    });
+    $("#act_03 .detail").attr({
+        "data-toggle":"modal",
+        "data-target":"#act_03_detail"
+    });
+    $("#act_04 .detail").attr({
+        "data-toggle":"modal",
+        "data-target":"#act_02_detail"
+    });
+</script>
+
+</body>
+</html>

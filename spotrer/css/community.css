@@ -1,0 +1,62 @@
+.community{
+    max-width: 80px;
+    max-height: 80px;
+    margin-right: 5px;
+}
+
+.events{
+    background-color: ghostwhite;
+    padding-top: 1px;
+    margin-top: 20px;
+}
+
+.events h4{
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+.events p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.events-body{
+    min-height: 60px;
+}
+.love{
+    height: 40px;
+    width: 40px;
+    float: right;
+    margin-left: 10px;
+}
+.love_num {
+    float: right;
+    color: #eb4f38;
+    font-size: 22px;
+    margin-top: 3px;
+}
+
+#add_moment{
+    /*width: 600px;*/
+}
+#add_moment button{
+    width: 100px;
+    margin-top: 15px;
+    float: right;
+}
+
+#my_moments{
+    background-color: #FFCE54;
+    margin-top: 20px;
+    height: 128px;
+    margin-left: 20px;
+    font-size: 36px;
+    font-family: "Chalkboard";
+    text-align: center;
+    padding-top: 30px;
+    cursor: default;
+}
+
+#mine{
+    /*padding: 20px;*/
+}

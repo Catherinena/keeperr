@@ -1,0 +1,18 @@
+.media-object.img-rounded{
+    max-width: 50px;
+    max-height: 50px;
+}
+#followers{
+    margin-left: 30px;
+}
+#followers .panel{
+    margin-bottom: 30px;
+    padding: 10px;
+    position: relative;
+}
+
+#followers .btn.btn-primary{
+    /*background-color: red;*/
+    position:absolute;
+    top:10%;
+}

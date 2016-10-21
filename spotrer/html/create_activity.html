@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Activity</title>
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/site.min.js"></script>
+    <script src="../js/flatpickr.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/bootflat.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/site.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/activity_page.css" />
+    <link rel="stylesheet" type="text/css" href="../css/act_person.css">
+    <link rel="stylesheet" type="text/css" href="../css/create_activity.css">
+    <link rel="stylesheet" type="text/css" href="../css/flatpickr.min.css">
+
+</head>
+<body>
+<div class="docs-header">
+<nav class="navbar navbar-default navbar-custom" role="navigation" >
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="../img/logo.png" height="40"/>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="nav-link current" href="activity.html">Activity</a>
+                </li>
+
+                <li>
+                    <a class="navbar-link" href="community.html">Community</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="setting.html">Setting</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</div>
+
+<div id="activity_pane" class="row">
+    <div id="left-nav" class="col-lg-3 col-md-3 col-sm-5">
+        <div id="real-left-nav">
+            <div id="name_avatar">
+                <img src="../img/avatar12.png" class="img-rounded">
+                <h6>koawitch</h6>
+                <p>joined <b>8</b> activities</p>
+            </div>
+            <hr />
+            <div >
+                <button type="button" class="btn btn-link col-lg-12 nav-buttons" onclick="location='activity.html'">Activity Community</button>
+                <button type="button" class="btn btn-link col-lg-12 nav-buttons" onclick="location='my_activity.html'">My Activity</button>
+                <button type="button" class="btn btn-primary col-lg-12" onclick="location='create_activity.html'">Create A New Activity</button>
+            </div>
+        </div>
+    </div>
+    <div id="create_new_activity" class="col-lg-9 col-md-9 col-sm-7">
+        <div class="container documents">
+            <div class="col-lg-7 col-md-7 col-sm-12">
+                <div  id="create_form">
+
+
+                    <div class="row create_line">
+                        <div class="col-lg-6">
+                            <label>Activity Name: </label>
+                            <input id="activity_name" type="text"  class="form-control">
+                        </div>
+
+                        <div class="col-lg-6">
+                            <label>district: </label>
+                            <select name="selecter_distric" class="selecter_3"  data-selecter-options='{"cover":"true"}'>
+                                <option value="beijing">Beijing</option>
+                                <option value="shanghai">Shanghai</option>
+                                <option value="nanjing">Nanjing</option>
+                                <option value="wuhan">Wuhan</option>
+                                <option value="hangzhou">Hangzhou</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row create_line">
+                        <div class="col-lg-6">
+                            <label>activity: </label>
+                            <select name="selecter_formation" class="selecter_3"  data-selecter-options='{"cover":"true"}'>
+                                <option value="running">Running</option>
+                                <option value="bicycle">Bicycle</option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <label>type: </label>
+                            <select name="selecter_type" class="selecter_3"  data-selecter-options='{"cover":"true"}'>
+                                <option value="beijing">SinglePK</option>
+                                <option value="shanghai">MultiPeople Competition</option>
+                                <option value="nanjing">Time Relay</option>
+                                <option value="wuhan">Target Competition</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row create_line">
+                        <div class="col-lg-6">
+                            <label>start-time</label>
+                            <p class="flatpickr" data-wrap="true" data-click-opens="false">
+                                <input placeholder="start time" data-input id="from" class="form-control select-time">
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>end-time</label>
+                            <p class="flatpickr" data-wrap="true" data-click-opens="false">
+                                <input placeholder="end time" data-input id="to" class="form-control select-time">
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="create_line">
+                        <label>introduction: </label>
+                        <textarea id="introduction" class="form-control" rows="3" placeholder="describe the activity to let more people know~"></textarea>
+                    </div>
+
+
+
+                    <button type="button" class="btn btn-success">Create!</button>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#from").flatpickr({
+        "minDate":"2016-10-22"
+    });
+    $("#to").flatpickr({
+        "minDate":"2016-10-22"
+    });
+</script>
+
+<script src="../js/act_person.js"></script>
+
+
+</body>
+</html>

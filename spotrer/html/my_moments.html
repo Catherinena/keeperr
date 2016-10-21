@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Moment</title>
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/site.min.js"></script>
+    <!--<script src="../js/echarts.js"></script>-->
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="../css/bootflat.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/site.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/profile.css" />
+    <script src="../js/profile.js"></script>
+    <script src="../js/community.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/community.css">
+    <link rel="stylesheet" type="text/css" href="../css/my_moment.css">
+</head>
+<body>
+
+<div class="docs-header">
+    <nav class="navbar navbar-default navbar-custom" role="navigation" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="../img/logo.png" height="40"/>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="nav-link" href="activity.html">Activity</a>
+                    </li>
+
+                    <li>
+                        <a class="navbar-link current" href="community.html">Community</a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="setting.html">Setting</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div style="margin:20px;">
+    <div class="col-sm-3 col-md-3" >
+        <div id="owner_profile"></div>
+        <script>
+            $("#owner_profile").append(get_profile(person));
+        </script>
+    </div>
+    <div class="col-md-9 col-sm-8">
+        <div id="mine" class="row">
+            <div id="add_moment" class="row col-lg-8 col-md-8 col-sm-9">
+                <label>add a new moment:</label>
+                <textarea class="form-control" rows="3" placeholder="share moments with your friends!"></textarea>
+                <button type="button" class="btn btn-primary">submit</button>
+            </div>
+            <div id="friends_moments" class="col-lg-4 col-md-4 col-sm-2" onclick="location='community.html'">
+                Friends' Moments
+            </div>
+        </div>
+        <hr />
+        <h3>My Moments</h3>
+        <div id="moments"></div>
+        <script>
+            $("#moments").append(get_moments(moment1));
+            $("#moments").append(get_moments(moment1));
+            $("#moments").append(get_moments(moment1));
+            $("#moments").append(get_moments(moment1));
+            $("#moments").append(get_moments(moment1));
+        </script>
+    </div>
+</div>
+
+
+</body>
+</html>

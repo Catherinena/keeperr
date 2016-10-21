@@ -1,0 +1,215 @@
+.label_select{
+	float:left;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+.activity{
+	margin: 90px;
+}
+.activity_title{
+	font-size: 24px;
+}
+
+
+
+/*.act{
+	margin-left: 30px;
+}*/
+
+.act ul{
+	padding:0;
+ 	list-style:none
+ }
+ .act .unit{
+ 	
+ 	margin-left: 10px;
+ 	margin-top: 30px;
+ 	position:relative;
+ 	display:inline-block;
+ 	min-width:250px;
+ 	max-width: 250px;
+ 	text-align:center;
+ 	border-radius:4px;
+ 	-webkit-box-shadow:0 1px 2px rgba(0,0,0,.2);
+ 	-moz-box-shadow:0 1px 2px rgba(0,0,0,.2);
+ 	box-shadow:0 1px 2px rgba(0,0,0,.2);
+ 	-webkit-border-radius:4px;
+ 	-moz-border-radius:4px
+ }
+ .act .unit.active{
+	 margin-top:30px;
+ 	z-index:1;
+ 	/*margin-right:-36px;*/
+ 	/*margin-left:-36px;*/
+ 	-webkit-box-shadow:0 0 8px rgba(0,0,0,.6);
+ 	-moz-box-shadow:0 0 8px rgba(0,0,0,.6);
+ 	box-shadow:0 0 8px rgba(0,0,0,.6)
+ }
+ /*.act .unit.active .activity-title h3{*/
+ 	/*font-size:40px*/
+ /*}*/
+ @media screen and (max-width:767px){
+ 	.act .unit{
+ 		display:block;
+ 		margin-bottom:20px
+ 	}
+ 	.act .unit.active{
+ 		top:0;
+ 		margin-right:0;
+ 		margin-left:0
+ 	}
+ 	.act .unit.active .activity-title h3{
+ 		font-size:30px
+ 	}
+ }
+ .act .activity-title{
+ 	padding:20px 20px 10px;
+ 	color:#fff;
+ 	border-top-left-radius:4px;
+ 	border-top-right-radius:4px;
+ 	-webkit-border-top-left-radius:4px;
+ 	-moz-border-radius-topleft:4px;
+ 	-webkit-border-top-right-radius:4px;
+ 	-moz-border-radius-topright:4px
+ }
+ .act .activity-title h3,.act .activity-title h3>p{
+ 	margin:0
+ }
+ .act .activity-body{
+ 	padding:20px 20px 10px;
+ 	max-height: 240px;
+ 	min-height: 240px;
+ }
+ .act .activity-body ul{
+ 	padding-top:10px
+ }
+ .act .activity-body li{
+ 	margin-bottom:10px;
+ 	font-size: 17px;
+ }
+ .act .activity-body h4{
+ 	margin:0
+ }
+ .act .activity-foot{
+ 	padding:20px;background-color:#FFFFFF;
+ 	border-bottom-right-radius:4px;
+ 	border-bottom-left-radius:4px;
+ 	-webkit-border-bottom-left-radius:4px;
+ 	-moz-border-radius-bottomleft:4px;
+ 	-webkit-border-bottom-right-radius:4px;
+ 	-moz-border-radius-bottomright:4px;
+ }
+ .act .activity-blue .activity-title{
+ 	background-color:#4fc1e9
+ }
+ .act .activity-blue .activity-body{
+ 	background-color:#d7f1fa
+ }
+
+.activity-body{
+	font-family: "Optima";
+}
+
+.activity-body .head-intro{
+	font-size: 24px;
+	font-family: "Optima";
+}
+
+
+ .act .activity-blue .activity-body ul{
+ 	border-top:1px solid #aae1f4
+ }
+ .act .activity-foot .join{
+ 	background-color: #F6BB42;
+ 	border-color: #F6BB42;
+ 	margin-right: 15px;
+ 	min-width: 90px;
+ }
+
+.act .activity-foot .delete{
+	background-color: #DA4453;
+	border-color: #DA4453;
+	margin-right: 15px;
+	width: 90px;
+}
+
+.act .activity-foot .exit{
+	background-color: gray;
+	border-color: gray;
+	margin-right: 15px;
+	width: 90px;
+}
+ 
+ .act .activity-foot .detail{
+ 	background-color: #37BC9B;
+ 	border-color: #37BC9B;
+ 	margin-left: 15px;
+ 	min-width: 90px;
+ }
+ 
+ .act .activity-green .activity-title{
+ 	background-color:#a0d468
+ }
+ .act .activity-green .activity-body{
+ 	background-color:#ebf6df
+ }
+ .act .activity-green .activity-body ul{
+ 	border-top:1px solid #d2ebb7
+ }
+ .act .activity-orange .activity-title{
+ 	background-color:#ffce54
+ }
+ .act .activity-orange .activity-body{
+ 	background-color:#fffaed
+ }
+ .act .activity-orange .activity-body ul{
+ 	border-top:1px solid #ffebba
+ }
+ .act .activity-pink .activity-title{
+ 	background-color: #EC87C0;
+ } 
+ .act .activity-pink .activity-body{
+ 	background-color:#fae6f1;
+ }
+ .act .activity-pink .activity-body ul{
+ 	border-top:1px solid #f8a9d6;
+ }
+
+ .modal p{
+	 font-family: Optima;
+ }
+
+.modal-header p b{
+	font-size: 22px;
+	font-family: "Optima";
+	margin-right: 12px;
+}
+
+.modal-body .rank img{
+	max-width: 80px;
+	max-height: 80px;
+	float: left;
+}
+
+.modal-body .rank p{
+	font-size: 18px;
+}
+
+.modal-body .rank .rank-num{
+	float: left;
+	font-size: 22px;
+	margin-top: 25px;
+}
+
+.modal-body .rank .name{
+	padding-top: 15px;
+}
+
+.modal-body .rank{
+	margin-top: 25px;
+}
+
+.modal-header p i{
+	font-size: 20px;
+	color: #4FC1E9;
+}

@@ -1,0 +1,42 @@
+#real-left-nav{
+    margin-left: 50px;
+}
+
+#name_avatar img{
+    margin: 10px;
+    max-width: 120px;
+    max-height: 120px;
+    float: left;
+
+}
+#name_avatar h6{
+    padding-top: 30px;
+    font-size: 24px;
+}
+#name_avatar b{
+    font-size: 28px;
+    margin-left: 18px;
+}
+#name_avatar p{
+    margin-top: 10px;
+}
+
+#real-left-nav{
+    background-color: #f3fafb;
+}
+#real-left-nav button{
+    /*margin-top: 20px;*/
+}
+#real-left-nav hr{
+    border: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 1px;
+    background-color: #5D9CEC;
+}
+.btn-link{
+    color: #31708f;
+}
+/*#real-left-nav .btn-link{*/
+    /*color: #a94442;*/
+/*}*/
